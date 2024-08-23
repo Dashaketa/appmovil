@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>recuperar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Recuperar Contraseña</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size='sm'>
+            <ion-label position="fixed">Nombre de Usuario</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="sm">
+            <ion-input type="text"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-button (click)="recuperarPass()" expand="block" fill="clear" shape="round">
+            Recuperar
+          </ion-button>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
