@@ -8,16 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    path: 'register',
+    loadChildren: () => import('./Access/register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'recuperar',
-    loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+    path: 'perfil',
+    loadChildren: () => import('./Access/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
 ];
 
