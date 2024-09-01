@@ -14,7 +14,7 @@ export class HomePage {
     password: '',
     nombre: '',
     apellido:'',
-    fdn:''
+    fechaNacimiento:''
   };
   showPassword:boolean=false;
   /* mensaje de respuesta */
