@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PerfilPage implements OnInit {
   username = '';
+  fechaNacimiento=Date;
   constructor(private router: Router) {
     const navegacion = this.router.getCurrentNavigation();
     const state = navegacion?.extras.state as {
@@ -15,7 +16,7 @@ export class PerfilPage implements OnInit {
       password: '';
       nombre: '';
       apellido:'';
-      fdn:''
+      fechaNacimiento:''
     };
     this.username = state.username;
     //Console.log
