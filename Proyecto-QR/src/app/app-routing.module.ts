@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./Access/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
+  {
+    path: 'recuperar-password',
+    loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+  },
 ];
 
 @NgModule({
