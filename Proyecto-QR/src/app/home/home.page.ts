@@ -52,8 +52,9 @@ export class HomePage {
     this.spinner = !this.spinner;
   }
   validar() {
+    const complexPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[.,\-!])[a-zA-Z0-9.,\-!]*$/;
     if (this.user.username.length != 0) {
-      if (this.user.password.length != 0) {
+      if (this.user.password.length >= 8 && complexPattern.test(this.user.password)) {
         //Funciona
         this.mensaje = 'Conexion exitosa';
         let navigationExtras: NavigationExtras = {
@@ -72,7 +73,7 @@ export class HomePage {
         }, 3000);
       } else {
         console.log('Contraseña vacia');
-        this.mensaje = 'Contraseña vacia';
+        this.mensaje = 'Su contraseña debe tener un largo de 8 caracteres y contener al menos 1 número, 1 letra y 1 símbolo';
         //No funciona
       }
     } else {
