@@ -73,7 +73,7 @@ export class HomePage {
         }, 3000);
       } else {
         console.log('Contraseña vacia');
-        this.mensaje = 'Su contraseña debe tener al menos 8 caracteres, 1 número y 1 símbolo';
+        this.mensaje = 'Su contraseña debe tener un largo de 8 caracteres y contener al menos 1 número, 1 letra y 1 símbolo';
         //No funciona
       }
     } else {
