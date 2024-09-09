@@ -46,14 +46,16 @@
             </ion-select>
           </ion-item>
           
-          <ion-item>
-            <ion-label position="floating">Fecha de Nacimiento</ion-label>
-            <mat-form-field appearance="fill" class="full-width">
-              <mat-label>Fecha de Nacimiento</mat-label>
-              <input matInput [matDatepicker]="picker" placeholder="Selecciona tu fecha" [(ngModel)]="fechaNacimiento">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
+          <ion-item >
+            <ion-label style="text-align: start;">Fecha Nacimiento</ion-label>
+            <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+            <ion-modal [keepContentsMounted]="true">
+              <ng-template>
+                <ion-datetime id="datetime"
+                presentation="date"></ion-datetime>
+              </ng-template>
+            </ion-modal>
           </ion-item>
           
         </ion-list>
